@@ -34,7 +34,7 @@ public class MainDrive {
 //				중복통과가 true면 배열에 담고, 값을 출력, while 탈출
 				if (isDuplOk) {
 					questionArr[i] = randomNum;
-					System.out.println(randomNum);
+//					System.out.println(randomNum);
 					break;
 				}
 			}
