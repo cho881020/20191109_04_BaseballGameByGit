@@ -1,12 +1,17 @@
 package code;
 
+import java.util.Scanner;
+
 public class MainDrive {
 
 	public static void main(String[] args) {
 
 //		문제를 출제하는 세자리 숫자가 담긴 배열
 		int[] questionArr = new int[3];
-		
+//		사용자가 입력한 세자리 숫자를 쪼개서 담을 배열
+		int[] userInputNumArr = new int[3];
+
+		Scanner scan = new Scanner(System.in);
 
 //		3자리 숫자를 저장하는 반복문
 		for (int i = 0; i < questionArr.length; i++) {
@@ -36,6 +41,25 @@ public class MainDrive {
 
 		}
 
+		
+		
+//		몇번만에 맞췄는지 기록하기 위한 변수
+		int inputCount = 0;
+		
+//		3S를 달성해야 게임이 종료.
+		while (true) {
+			System.out.print("세자리 숫자를 입력 : ");
+			int inputNum = scan.nextInt();
+			
+//			한번 더 입력했다고 기록.
+			inputCount++;
+
+//			386 => 3? 8? 6?
+			userInputNumArr[0] = inputNum / 100;
+			userInputNumArr[1] = inputNum / 10 % 10;
+			userInputNumArr[2] = inputNum % 10;
+		}
+		
 		
 	}
 	
