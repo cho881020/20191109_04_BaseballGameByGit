@@ -77,6 +77,18 @@ public class MainDrive {
 					}
 				}
 			}
+			
+
+//			스트라이크 / 볼 갯수 판단해서 출력하는 코드
+			System.out.println(String.format("%dS, %dB 입니다.", strikeCount, ballCount));
+			
+//			3S를 달성하면 축하메세지 + 횟수 + while 탈출
+			if (strikeCount == 3) {
+				System.out.println("정답입니다!");
+				System.out.println(String.format("%d회 만에 맞췄습니다.", inputCount));
+				break;
+			}
+			
 		}
 		
 		
