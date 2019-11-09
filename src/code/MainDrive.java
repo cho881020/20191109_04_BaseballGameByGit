@@ -58,6 +58,25 @@ public class MainDrive {
 			userInputNumArr[0] = inputNum / 100;
 			userInputNumArr[1] = inputNum / 10 % 10;
 			userInputNumArr[2] = inputNum % 10;
+			
+//			?S ?B인지 판단하는 로직.
+			int strikeCount = 0;
+			int ballCount = 0;
+
+			for (int i = 0; i < questionArr.length; i++) {
+				for (int j = 0; j < userInputNumArr.length; j++) {
+
+//					적혀있는 숫자가 같은지 우선 비교
+					if (questionArr[i] == userInputNumArr[j]) {
+//						같은 숫자를 찾았을때 위치도 같은지
+						if (i == j) {
+							strikeCount++;
+						} else {
+							ballCount++;
+						}
+					}
+				}
+			}
 		}
 		
 		
